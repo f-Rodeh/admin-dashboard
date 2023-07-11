@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
-  --main-bg-color: #f3f3f3;
+  --main-bg-color: #f1f1f1;
   --main-surface-color: #fefefe;
   --dark-txt: #111111;
   --light-txt: #fefefe;
@@ -10,7 +10,6 @@
   --primary-color: lightblue;
   --accent-color: orange;
 }
-
 
 * {
   box-sizing: border-box;
@@ -58,7 +57,6 @@ body  {
 .anouncements-sidebar,
 .trending-sidebar {
   grid-column-end: -1;
-  background-color: green;
 }
 
 /* items layout */
@@ -138,19 +136,34 @@ ion-icon {
 
 main {
   grid-area: main;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: max-content;
-  gap: 24px;
-
-  padding: 24px;
-  margin: 24px 0;
 }
 
-main h2 { 
+main,
+.anouncements-sidebar {
+  padding: 24px;
+  margin: 24px 0;
+  display: grid;
+  gap: 24px;
+}
+
+.anouncements-sidebar {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+main h2,
+.anouncements-sidebar h2 { 
   grid-column: 1 / -1;
   margin: 0;
   font-size: 1.3rem;
+}
+
+.card {
+  background-color: var(--main-surface-color);
+  border-radius: 1rem;
+  padding: 24px 36px;
 }
 
 main .card {
@@ -158,10 +171,8 @@ main .card {
   grid-template-rows: 24px 1fr 24px;
   gap: 12px;
 
-  background-color: var(--main-surface-color);
-  border-radius: 1rem;
   height: 300px;
-  padding: 24px 36px;
+
   padding-right: 24px;
 }
 
@@ -173,6 +184,6 @@ main .card {
   font-size: 1.1rem;
 }
 
-main .card p {
+.card p {
   color: var(--low-contrast-txt);
 }
