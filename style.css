@@ -58,12 +58,13 @@ body  {
   background-color: white;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   padding: 32px;
 }
 
 .user-name {
   font-weight: bold;
+  min-width: max-content;
 }
 
 input[type='search'] {
@@ -71,10 +72,10 @@ input[type='search'] {
   min-height: 1.2rem;
   margin-right: auto;
   flex: 0 1 600px;
+  padding: 0 12px;
 
   background-color: #dedede;
   border-radius: 1rem;
-  appearance: none;
   border: none;
 }
 
