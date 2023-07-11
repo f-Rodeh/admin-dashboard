@@ -32,16 +32,21 @@ body  {
 }
 
 /* page layout */
-
-.grid-container {
+body > .grid-container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto auto 3fr 3fr;
   grid-template-areas: 
     'sidebar ...  ...'
     'sidebar ...  ...'
     'sidebar main anouncements'
     'sidebar main trending';
+}
+
+main > .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: max-content;
+  gap: 24px;
 }
 
 .nav-sidebar {
@@ -59,10 +64,8 @@ body  {
   grid-column-end: -1;
 }
 
-/* items layout */
-
-.header.one,
-.header.two {
+/* elements layout */
+.header {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -82,9 +85,7 @@ body  {
   background-color: var(--primary-color);
   border-radius: 2rem;
   border: none;
-
   font-weight: bold;
-  /* color: white; */
 }
 
 .greeting {
@@ -93,19 +94,6 @@ body  {
 
 .greeting > * {
   margin: 0; 
-}
-
-.greeting h1 {
-  font-size: 1.7rem;
-}
-
-.greeting span {
-  color: var(--low-contrast-txt);
-}
-
-.user-name {
-  font-weight: bold;
-  min-width: max-content;
 }
 
 input[type='search'] {
@@ -136,54 +124,76 @@ ion-icon {
 
 main {
   grid-area: main;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: max-content;
 }
 
 main,
-.anouncements-sidebar {
-  padding: 24px;
-  margin: 24px 0;
-  display: grid;
-  gap: 24px;
+.anouncements-sidebar,
+.trending-sidebar {
+  margin: 36px 24px 0;
 }
 
-.anouncements-sidebar {
+.anouncements-sidebar,
+.trending-sidebar {
   margin-left: 0;
-  padding-left: 0;
-}
-
-main h2,
-.anouncements-sidebar h2 { 
-  grid-column: 1 / -1;
-  margin: 0;
-  font-size: 1.3rem;
 }
 
 .card {
   background-color: var(--main-surface-color);
   border-radius: 1rem;
-  padding: 24px 36px;
+  padding: 24px;
 }
 
 main .card {
   display: grid;
-  grid-template-rows: 24px 1fr 24px;
-  gap: 12px;
+  grid-template-rows: auto 1fr auto;
 
   height: 300px;
-
-  padding-right: 24px;
+  padding-left: 36px;
 }
 
 .icons {
   justify-self: end;
 }
 
-.card h3 {
-  font-size: 1.1rem;
-}
 
+/* text styling */
 .card p {
   color: var(--low-contrast-txt);
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+h2{
+  font-size: 1.3rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.anouncements-sidebar p {
+  font-size: 0.9em;
+}
+
+.greeting span {
+  color: var(--low-contrast-txt);
+}
+
+.user-name {
+  font-weight: bold;
+  min-width: max-content;
 }
