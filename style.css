@@ -182,11 +182,16 @@ h4 {
 
 p {
   margin-top: 0;
-  margin-bottom: 26px;
+  padding-bottom: 13px;
+  margin-bottom: 13px;
 }
 
 .anouncements-sidebar p {
   font-size: 0.9em;
+}
+
+.anouncements-sidebar p:not(:last-child) {
+  border-bottom: 2px solid var(--main-bg-color);
 }
 
 .greeting span {
