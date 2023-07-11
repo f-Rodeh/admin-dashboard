@@ -11,6 +11,11 @@
   --accent-color: orange;
 }
 
+::selection {
+  background-color: var(--accent-color);
+  color: var(--dark-txt);
+}
+
 * {
   box-sizing: border-box;
 }
