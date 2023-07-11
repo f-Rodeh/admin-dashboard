@@ -145,7 +145,7 @@ main,
 .card {
   background-color: var(--main-surface-color);
   border-radius: 1rem;
-  padding: 24px;
+  padding: 36px 24px;
 }
 
 main .card {
