@@ -43,7 +43,7 @@ body  {
 
 .header {
   grid-column: 2 / -1;
-  background-color: red;
+  background-color: #fefefe;
 }
 
 .anouncements-sidebar,
@@ -54,12 +54,39 @@ body  {
 
 /* items layout */
 
-.header.one {
-  background-color: white;
+.header.one,
+.header.two {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 32px;
+  padding: 0 32px;
+}
+
+.header.two button {
+  box-sizing: content-box;
+  padding: 12px 32px;
+  background-color: lightblue;
+  border-radius: 2rem;
+  border: none;
+
+  font-weight: bold;
+  /* color: white; */
+}
+
+.greeting {
+  margin-right: auto;
+}
+
+.greeting > * {
+  margin: 0; 
+}
+
+.greeting h1 {
+  font-size: 1.7rem;
+}
+
+.greeting span {
+  color: #666;
 }
 
 .user-name {
