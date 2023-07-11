@@ -55,17 +55,27 @@ body  {
 /* items layout */
 
 .header.one {
-  background-color: aliceblue;
+  background-color: white;
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 32px;
 }
 
+.user-name {
+  font-weight: bold;
+}
+
 input[type='search'] {
-  max-height: 1.4rem;
+  height: 28px;
+  min-height: 1.2rem;
   margin-right: auto;
-  flex: 0 1 500px;
+  flex: 0 1 600px;
+
+  background-color: #dedede;
+  border-radius: 1rem;
+  appearance: none;
+  border: none;
 }
 
 label[for='search'] {
