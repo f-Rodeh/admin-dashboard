@@ -151,6 +151,14 @@ main .card {
   padding-left: 36px;
 }
 
+.trending-sidebar .card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 18px 12px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
 .icons {
   justify-self: end;
 }
@@ -186,8 +194,15 @@ p {
   margin-bottom: 13px;
 }
 
-.anouncements-sidebar p {
+.anouncements-sidebar p,
+.trending-sidebar p {
   font-size: 0.9em;
+}
+
+.trending-sidebar h4,
+.trending-sidebar p {
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .anouncements-sidebar p:not(:last-child) {
