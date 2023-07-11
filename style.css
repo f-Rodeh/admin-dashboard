@@ -38,12 +38,16 @@ body  {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto auto 3fr 3fr;
+  grid-template-areas: 
+    'sidebar ...  ...'
+    'sidebar ...  ...'
+    'sidebar main anouncements'
+    'sidebar main trending';
 }
 
 .nav-sidebar {
   background-color: var(--primary-color);
-  grid-column: 1;
-  grid-row: 1 / -1;
+  grid-area: sidebar;
 }
 
 .header {
@@ -125,4 +129,8 @@ label[for='search'] {
 ion-icon {
   flex: none;
   font-size: 20px;
+}
+
+main {
+  grid-area: main;
 }
