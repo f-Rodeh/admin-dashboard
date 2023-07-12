@@ -98,6 +98,8 @@ main > .grid-container {
   border-radius: 2rem;
   border: none;
   font-weight: bold;
+
+  transition: scale 100ms ease-in-out;
 }
 
 .greeting {
@@ -135,14 +137,19 @@ ion-icon:hover:not(:active) {
   transition: scale 50ms ease-in-out;
 }
 
-ion-icon:active {
-  scale: 0.8;
+ion-icon:active,
+button:active {
+  scale: 0.9;
   transition: scale 100ms ease-in-out;
 }
 
 main .card:hover {
   transition: box-shadow 150ms ease-in-out;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+html body .header.two :hover {
+  background-color: var(--accent-color);
 }
 
 .card ion-icon {
