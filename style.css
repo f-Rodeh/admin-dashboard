@@ -168,6 +168,31 @@ main .card {
   justify-self: end;
 }
 
+.nav-sidebar {
+  display: grid;
+  grid-template-columns: min-content 120px;
+  align-content: start;
+  align-items: center;
+  padding: 36px 18px;
+  gap: 6px 12px;
+}
+
+.nav-sidebar img:first-of-type {
+  width: 52px;
+
+}
+
+.nav-sidebar h2 {
+  margin: 0;
+  align-self: end;
+}
+
+.nav-sidebar ion-icon {
+  justify-self: center;
+}
+
+
+
 
 /* text styling */
 .card p {
