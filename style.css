@@ -7,8 +7,8 @@
   --light-txt: #fefefe;
   --low-contrast-txt: #666;
 
-  --primary-color: #B8E7E1;
-  --accent-color: #FEFF86;
+  --primary-color: hsl(172, 49%, 86%);
+  --accent-color: hsl(55, 100%, 81%);
 }
 
 ::selection {
